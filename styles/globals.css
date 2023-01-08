@@ -28,6 +28,12 @@ body {
   justify-content: space-between;
    align-items: center;
 }
+.eachblog {
+ border-radius: 20px;
+ border: 1px solid #e9eaf5;
+ box-shadow: 5px 5px 10px lightgray;
+
+}
 .angle-right{
  display:flex;
  justify-content:center;
@@ -76,7 +82,7 @@ body {
   max-block-size: 500px;
   width: 50%;
   position: relative;
-  right:-150px;
+  right:-160px;
   top: 180px;
 }
  li{
@@ -298,7 +304,7 @@ a {
   color: rgb(42, 32, 110);
 }
 .article{
-  /* border-radius: 20px; */
+  border-radius: 20px;
   display:flex;
   padding: 20px;
   width: 100%;
@@ -306,10 +312,29 @@ a {
   max-height: 200px;
 }
 
-.article h2, .article h1{
-  white-space: nowrap;
+.article h2, .article h1, .loaded{
   overflow: hidden;
   text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; 
+          line-clamp: 2; 
+  -webkit-box-orient: vertical;  
+}
+.eachblog h2{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; 
+          line-clamp: 3; 
+  -webkit-box-orient: vertical; 
+}
+.desc{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; 
+          line-clamp: 2; 
+  -webkit-box-orient: vertical; 
 }
 .firstblog{
   border-radius: 20px;
@@ -344,11 +369,11 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  /* clip-path: path('M-34.040618,269.929255v-27.132887c0.537729,259.910831,-1.547617,460.124447,143.489329,479.58449s141.4024,-219.674659,144.494953,-277.658513v12.644854c-3.092553,-272.698,-10.622553,-331.268,-126.226553,-358.643s-161.219,85.945,-161.030304,117.209823Z'); */
-  /* clip-path: path('M85.333,77.888v356.224c28.501-19.093,85.44-28.779,170.667-28.779s142.187,9.685,170.667,28.779V77.888c-28.48,19.093-85.44,28.779-170.667,28.779S113.835,96.981,85.333,77.888z'); */
-    /* clip-path: polygon(58% 0, 88% 37%, 30% 100%, 0 65%) */
-  clip-path: polygon(58% 0, 88% 37%, 30% 100%, 0 65%)
+  mask-image: url('../public/cylinder.svg');
+  mask-repeat: no-repeat;
+  mask-size: 85%;
 }
+
 .topFooter1 {
   padding: 2rem;
   width: 35%;
@@ -422,6 +447,18 @@ footer {
   .doctor-potrait{
     top: -100px;
   }
+  .firstblog{
+    border-radius: 20px;
+    object-fit: contain;
+    height: 250px;
+  }
+  .article{
+    display:flex;
+    flex-direction: column;
+    height:400px;
+    justify-content: space-between;
+    max-height: 400px;;
+  }
   .appointment{
     height:200px;
     padding: 10px;
@@ -443,6 +480,12 @@ footer {
     padding: 20px;
     height: 160px;
    }
+   .article-image{
+    border-radius: 20px;
+    object-fit: contain;
+    width: 100%;
+    height:250px;
+  }
    .advantages h2{
     font-size: 1.1rem;
     line-height: 1.2 ;
@@ -496,11 +539,23 @@ footer {
   .half-first-section{
     display: none;
   }
+  .article h2{
+    -webkit-line-clamp: 3; 
+            line-clamp: 3; 
+  }
+  .article h1{
+    -webkit-line-clamp: 2; 
+            line-clamp: 2; 
+  }
  .circles{
   width:40px;
   height: 40px;
   line-height: 40px;
   bottom: 5px;
+ }
+ .emergency{
+  left:450px;
+
  }
   .circles.first{
     left: 150px;

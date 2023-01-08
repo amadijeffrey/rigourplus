@@ -1,5 +1,4 @@
 import Landing from "../components/landing"
-import Services from "../components/services"
 import Benefits from "../components/benefits"
 import Offers from "../components/offers"
 import Articles from "../components/articles"
@@ -9,7 +8,6 @@ function Home(){
     return (
         <>
           <Landing />
-          {/* <Services /> */}
           <Benefits />
           <Offers />
           <Articles />

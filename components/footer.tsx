@@ -10,7 +10,7 @@ return(
         <div className="topFooter flex flex-col md:flex-row justify-between px-10 lg:px-20 ">
            <div className=" topFooter1">
                 <div className="footerLogo">
-
+                    
                 </div>
                 <p className='text-base lg:text-xl'>Providing personalized, high-quality healthcare necessary to take control of your health with a plethora of patient resources from the comfort of a smartphone.</p>
                 <div className="socials flex">
