@@ -2,6 +2,7 @@ import facebookImg from '../public/Facebook.png'
 import twitterImg from '../public/Twitter.png'
 import InstagramImg from '../public/Instagram.png'
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 export default function Footer(){
@@ -38,18 +39,18 @@ return(
             <div className="topFooter2 first">
                 <h6>Links</h6>
                 <ul>
-                    <a href='/'><li>Home</li></a>
-                    <a href='/'><li>Our Products</li></a>
-                    <a href='/'><li>About Us</li></a>
-                    <a href='/'><li>Pricing</li></a>
+                    <Link href='/'><li>Home</li></Link>
+                    <Link href='/'><li>Our Products</li></Link>
+                    <Link href='/'><li>Linkbout Us</li></Link>
+                    <Link href='/'><li>Pricing</li></Link>
                 </ul>
             </div>
             <div className="topFooter2 second">
                 <h6>Resources</h6>
                 <ul>
-                    <a href='/'><li>Partners</li></a>
-                    <a href='/'><li>Careers</li></a>
-                    <a href='/'><li>Press</li></a>
+                    <Link href='/'><li>Partners</li></Link>
+                    <Link href='/'><li>Careers</li></Link>
+                    <Link href='/'><li>Press</li></Link>
                 </ul>
             </div>
             <div className="topFooter2">
