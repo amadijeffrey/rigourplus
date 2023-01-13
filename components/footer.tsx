@@ -41,7 +41,7 @@ return(
                 <ul>
                     <Link href='/'><li>Home</li></Link>
                     <Link href='/'><li>Our Products</li></Link>
-                    <Link href='/'><li>Linkbout Us</li></Link>
+                    <Link href='/'><li>About Us</li></Link>
                     <Link href='/'><li>Pricing</li></Link>
                 </ul>
             </div>
