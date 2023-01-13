@@ -3,6 +3,7 @@ import {db} from '../../firebase-config';
 import {collection, query, orderBy, onSnapshot} from 'firebase/firestore'
 import Link from "next/link";
 import Navbar from "../../components/navbar";
+import Footer from "../../components/footer";
 
 
 export type Blog = {
@@ -40,7 +41,8 @@ export default function Blogs(){
             </div>
     }else{
         return(
-            <div className="px-10 py-5 lg:px-40 lg:py-20 bg-[#e9eaf5] h-auto">
+            <>
+            <div className="px-6 sm:px-10 py-5 lg:px-40 lg:py-20 bg-[#e9eaf5] h-auto">
                 <Navbar />
                 <h2 className="text-center font-bold text-xl lg:text-3xl mb-10 mt-16">All blogs</h2>
                 {blogs.map((blog) => {
@@ -58,6 +60,8 @@ export default function Blogs(){
                         </Link>
                     })}
             </div>
+            <Footer />
+            </>
         )
     }
 }

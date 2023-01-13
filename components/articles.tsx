@@ -5,7 +5,6 @@ import {collection, query, orderBy, onSnapshot} from 'firebase/firestore'
 import Link from "next/link";
 import { Blog } from '../pages/blogs/index';
 import ArticleList from './ArticleList';
-import parse from 'html-react-parser'
 
 
 export default function Articles(){
@@ -38,7 +37,7 @@ export default function Articles(){
         return (
             <div>
                 <h1  className='text-3xl text-center lg:text-6xl lg:flex lg:justify-center font-bold m-24 lg:m-36 '>Daily curated articles for your healthcare</h1>
-                <div className='flex flex-col lg:flex-row px-10  lg:px-40 lg:py-20'>
+                <div className='flex flex-col lg:flex-row px-6 sm:px-10  lg:px-40 lg:py-20'>
                     <div className='w-full lg:w-6/12 p-7'>
                         <img src={imageUrl} alt='doctor consulting online' className='firstblog'/>
                         <h1 className='text-2xl lg:text-4xl font-bold mt-9' >{title}</h1>

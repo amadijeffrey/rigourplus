@@ -1,4 +1,4 @@
-import pictureOfDocSmiling from '../public/docsmiling.jpg';
+import pictureOfDocSmiling from '../public/picture4.jpg';
 import docprofile from '../public/docprofile.jpg';
 import healthTracka from '../public/healthtracka.png';
 import mdcn from '../public/mdcn.jpeg';
@@ -9,7 +9,7 @@ import Image from 'next/image'
 export default function Offers(){
     return (
         <>
-            <div className='px-10 py-5 lg:px-40 lg:py-20 lg:my-44'>
+            <div className='px-6 sm:px-10 py-5 lg:px-40 lg:py-20 lg:my-44'>
                 <div className='flex flex-col lg:flex-row'>
                     <div className='w-full lg:w-6/12 p-5'>
                         <h1 className='text-3xl text-center sm:text-5xl lg:text-6xl mb-8'>We have experienced and professional doctors</h1>
@@ -34,10 +34,10 @@ export default function Offers(){
                         </div>
                         <button className='button'>Download</button>
                     </div>
-                    <div  className='w-full lg:w-6/12 relative lg:-right-36'>
-                       <Image  className='image' src={pictureOfDocSmiling} alt='doctor consulting online' />  
+                    <div  className=' lg:w-6/12 relative  '>
+                       <Image  src={pictureOfDocSmiling}  alt='doctor consulting online' className='h- w-full object-contain rounded-3xl' />  
                        <div className='card'>
-                            <Image src={docprofile} alt='doctor profile' className='docprofile'/>
+                            <Image src={docprofile} alt='doctor profile'  className='docprofile '/>
                             <div>
                                 <h1 className='text-xl lg:text-2xl'>Dr. Benita</h1>
                                 <h2 className='text-sm lg:text-xl'>Inhouse medical doc</h2>
@@ -45,7 +45,7 @@ export default function Offers(){
                         </div>
                     </div>
                 </div>
-                <h1 className='my-24 text-3xl sm:text-5xl font-bold lg:text-7xl flex justify-center'>Our Partners</h1>
+                <h1 className='my-24 text-3xl sm:text-5xl font-bold lg:text-7xl flex  justify-center'>Our Partners</h1>
                 <div className='partners'>
                     <Image src={healthTracka} alt='healthtracka logo' className='partner-icon'/>  
                     <Image src={mdcn} alt='mdcn logo' className='partner-icon'/>  

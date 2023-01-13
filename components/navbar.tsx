@@ -1,70 +1,44 @@
-import { Disclosure } from '@headlessui/react'
+import { Disclosure, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
+import {Fragment, useState} from 'react'
+
 
 
 const navigation = [
     { name: 'Home', href: '#' },
-    { name: 'How It Works', href: '/df' },
+    { name: 'How It Works', href: '/blogs' },
     { name: 'Our Customers speak', href: '#' },
-  ]
-  
-export default function Navbar(){
+]
+
+export default function Navbar() {
+    const [open,setOpen] = useState<boolean>(false)
     return (
-        <Disclosure as="nav" >
-            {({ open }) => (
-                <>
-                    <div className='mb-5lg:mb-0 '>
-                        <div className="relative flex  items-center justify-between">
-                        <div className="inset-y-0 left-0 flex items-center md:hidden">
-                            {/* Mobile menu button*/}
-                            <Disclosure.Button className="flex items-center justify-center rounded-md p-2 text-gray-400 border-solid border-2 border-[#6b5dd3]  focus:outline-none ">
-                            <span className="sr-only">Open main menu</span>
-                            {open ? (
-                                <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                            ) : (
-                                <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                            )}
-                            </Disclosure.Button>
-                        </div>
-                        <div className="flex items-center justify-center ">
-                            <a href='/' className=' text-2xl lg:text-5xl'>RigourPlus</a>
-                        </div>
-                        <div className="basis-6/12 grow hidden md:block lg:grow-0">
-                            <div className="flex justify-around  ">
-                                {navigation.map((item) => (
-                                <Link
-                                    key={item.name}
-                                    href={item.href}
-                                    className='text-lg lg:text-3xl'
-                                >
-                                    {item.name}
-                                </Link>
-                                ))}
-                            </div>
-                            </div>
-                        <Link href='/hy' className="button">
-                                Download
-                                <div className='h-9 w-9 angle-right'>{'>'}</div>
-                            </Link>
-                        </div>
-                    </div>
-                    <Disclosure.Panel className="md:hidden">
-                        <div className="fixed z-40 right-0 left-0 top-20 h-52 p-6 bg-[#e7e1f2] space-y-1  flex flex-col">
-                            {navigation.map((item) => (
-                                <Link
-                                key={item.name}
-                                href={item.href}
-                                className='text-xl'
-                                >
-                                {item.name}
-                                </Link>
-                            ))}
-                        </div>
-                    </Disclosure.Panel>
-                    
-                </>
-            )}
-            </Disclosure>
+        <>
+            <nav className='py-5 md:flex md:items-center md:justify-between'>
+                 <div className="flex justify-between items-center">
+                    <Link href='/' className=' text-2xl lg:text-5xl font-normal'>RigourPlus</Link>
+                    <span onClick={() => setOpen(!open)} className='text-3xl block md:hidden'>
+                    <i className={`${open ? "bi bi-x-lg" : 'bi bi-list'}`}></i>
+                    </span>
+                </div>
+                <ul className={`z-10 md:z-auto bg-[#e7e1f2] md:bg-inherit md:flex md:items-center  absolute md:static py-4 md:py-0  w-full 
+                left-0 right-0 md:w-auto transition-top-opacity ease-in-out duration-1000 ${open ? 'top-[90px] opacity-100' : '-top-[400px] opacity-0 md:opacity-100'}`}>
+                    <li className=' mx-4 my-6 md:my-0'>
+                        <Link href='/' className='text-lg lg:text-3xl'>Home</Link>
+                    </li>
+                    <li className=' mx-4 my-6 md:my-0'>
+                        <Link href='/blogs' className='text-lg lg:text-3xl'>How It Works</Link>
+                    </li>
+                    <li className=' mx-4 my-6 md:my-0'>
+                        <Link href='/' className='text-lg lg:text-3xl'>Our Customers speak</Link>
+                    </li>
+                    <Link href='/hy' className="button ml-4 md:ml-0">
+                        Download
+                        <div className='h-6 w-6 lg:h-9 lg:w-9 angle-right'>{'>'}</div>
+                    </Link>
+                </ul>
+            </nav>
+        </>
     )
 }
