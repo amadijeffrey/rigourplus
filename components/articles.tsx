@@ -36,13 +36,13 @@ export default function Articles(){
         const {imageUrl, title, content, id} = articles[0]
         return (
             <div>
-                <h1  className='text-3xl text-center lg:text-6xl lg:flex lg:justify-center font-bold m-24 lg:m-36 '>Daily curated articles for your healthcare</h1>
+                <h1  className='text-2xl sm:text-3xl text-center lg:text-6xl lg:flex lg:justify-center font-bold m-5 lg:m-24 lg:m-36 '>Daily curated articles for your healthcare</h1>
                 <div className='flex flex-col lg:flex-row px-6 sm:px-10  lg:px-40 lg:py-20'>
-                    <div className='w-full lg:w-6/12 p-7'>
+                    <div className='w-full lg:w-6/12 p-7  mb-4 lg:mb-0'>
                         <img src={imageUrl} alt='doctor consulting online' className='firstblog'/>
-                        <h1 className='text-2xl lg:text-4xl font-bold mt-9' >{title}</h1>
+                        <h1 className='text-xl sm:text-2xl lg:text-4xl font-bold mt-9 desc' >{title}</h1>
                         <h2
-                            className='text-lg lg:text-2xl text-[#a9a9a9] mt-2 desc'
+                            className='text-lg lg:text-2xl text-[#a9a9a9] mt-2 desc h-[3.5rem] sm:h-auto'
                             dangerouslySetInnerHTML={{__html: content}}
                             />
                         <Link href={`/blogs/${id}`}><h4 className='text-xl mt-7'>Learn more</h4></Link>

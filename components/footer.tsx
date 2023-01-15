@@ -57,7 +57,7 @@ return(
                 <h6>Our Office</h6>
                 <ul>
                     <p className="topFooter3p">Nigeria</p>
-                    <p className="topFooter3p">12e Admiralty way. Lekki Phase 1 Lagos</p>
+                    <p className="topFooter3p">12e Admiralty way, Lekki Phase 1 Lagos</p>
                    
                 </ul>
             </div>

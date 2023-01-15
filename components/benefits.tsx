@@ -22,7 +22,7 @@ export default function Benefits(){
                 </div>
             </div>
             <div  className=" w-full lg:w-6/12 lg:pl-10">
-                <h1 className="text-2xl sm:text:2xl font-bold mt-44 sm:mt-52 lg:mt-0 lg:text-6xl mb-7">The Advantages of <br />Using Rigour+ <hr  className='bg-[#6b5dd3] h-1 w-4/12 inline-block align-middle' /></h1>
+                <h1 className="text-2xl sm:text-2xl font-bold mt-44 sm:mt-52 lg:mt-0 lg:text-6xl mb-7">The Advantages of <br />Using Rigour+ <hr  className='bg-[#6b5dd3] h-1 w-4/12 inline-block align-middle' /></h1>
                 <div className="advantages">
                     <span><i className='bi bi-journals'></i></span>
                     <div>

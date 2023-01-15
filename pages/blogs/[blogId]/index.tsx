@@ -44,11 +44,11 @@ export default function Blog(){
             <>
                 <div className="px-6 sm:px-10 py-5 lg:px-40 lg:py-20 bg-[#e9eaf5] h-auto">
                     <Navbar />
-                    <div className="bg-white mt-16 rounded-3xl p-10">
-                        <img src={imageUrl} alt='blog image' className='h-80 lg:h-[500px] w-full object-contain'/>
-                        <h1 className='text-2xl lg:text-5xl mt-10'>{title}</h1>
+                    <div className="bg-white mt-16 rounded-3xl p-5 lg:p-10">
+                        <img src={imageUrl} alt='blog image' className='rounded-3xl lg:h-[500px] w-full object-cover'/>
+                        <h1 className='text-xl sm:text-2xl lg:text-5xl mt-10'>{title}</h1>
                         <h2
-                            className='text-lg lg:text-2xl text-[#a9a9a9] mt-5'
+                            className='text-base sm:text-lg lg:text-2xl text-[#a9a9a9] mt-5'
                             dangerouslySetInnerHTML={{__html: content}}
                             />
                     </div>

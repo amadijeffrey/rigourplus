@@ -312,9 +312,7 @@ a {
   display:flex;
   padding: 20px;
   width: 100%;
-  height: 200px;
-  max-height: 200px;
-  overflow: hidden;
+  height: 12rem;  
 }
 
 .article h2, .article h1, .loaded{
@@ -333,6 +331,7 @@ a {
           line-clamp: 3; 
   -webkit-box-orient: vertical; 
 }
+
 .desc{
   overflow: hidden;
   text-overflow: ellipsis;
@@ -345,7 +344,7 @@ a {
   border-radius: 20px;
   object-fit: cover;
   width: 100%;
-  height: 500px;
+  height: 24rem
 }
 .article-image{
   border-radius: 20px;
@@ -450,7 +449,6 @@ footer {
   }
   .offers>div{
     width:100%;
-   
   }
   .contact{
     width: 70%;
@@ -494,14 +492,13 @@ footer {
   .firstblog{
     border-radius: 20px;
     object-fit: contain;
-    height: 250px;
+    height: 13rem;
   }
   .article{
     display:flex;
     flex-direction: column;
-    height:400px;
+    height:25rem;
     justify-content: space-between;
-    max-height: 400px;;
   }
   .appointment{
     height:210px;
@@ -530,7 +527,8 @@ footer {
     border-radius: 20px;
     object-fit: contain;
     width: 100%;
-    height:250px;
+    height:50%;
+    margin-right: 0px;
   }
    .advantages h2{
     font-size: 1.1rem;

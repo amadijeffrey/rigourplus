@@ -44,15 +44,15 @@ export default function Blogs(){
             <>
             <div className="px-6 sm:px-10 py-5 lg:px-40 lg:py-20 bg-[#e9eaf5] h-auto">
                 <Navbar />
-                <h2 className="text-center font-bold text-xl lg:text-3xl mb-10 mt-16">All blogs</h2>
+                <h2 className="text-center font-bold text-xl lg:text-3xl mb-10 mt-14">All blogs</h2>
                 {blogs.map((blog) => {
                         return <Link href={`/blogs/${blog.id}`} key={blog.id}>
-                            <div  className="w-full h-auto flex flex-col md:flex-row p-5  eachblog mb-5 bg-white">
+                            <div  className="w-full h-96 md:h-full lg:h-full flex flex-col md:flex-row p-5  eachblog mb-5 bg-white">
                                 <img src={blog.imageUrl} alt='blog image' className='h-44 w-full md:w-3/12 md:mr-5 object-contain '/>
-                                <div className='w-full mt-5 md:mt-0 md:w-9/12'>
-                                    <h1 className='text-xl lg:text-3xl'>{blog.title}</h1>
+                                <div className='w-full h-2/4  md:h-full lg:h-full mt-5 md:mt-0 md:w-9/12'>
+                                    <h1 className='text-xl lg:text-3xl desc'>{blog.title}</h1>
                                     <h2
-                                        className='text-xl lg:text-2xl text-[#a9a9a9] mt-2'
+                                        className='text-base sm:text-lg lg:text-2xl text-[#a9a9a9] mt-2 h-[44%] sm:h-full lg:h-full'
                                         dangerouslySetInnerHTML={{__html: blog.content}}
                                         />
                                 </div>

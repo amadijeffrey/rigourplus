@@ -14,10 +14,10 @@ const ArticleList: React.FC<{allArticles: Blog[]}> = (props) =>  {
                    return <Link href={`/blogs/${article.id}`} key={article.id}>
                         <div className='article'>
                            <img src={article.imageUrl} alt='doctor profile' className='article-image'/>
-                            <div className='w-full md:w-8/12'>
+                            <div className='w-full h-[45%] sm:h-full lg:full md:w-8/12'>
                                 <h1 className='text-xl lg:text-3xl'>{article.title}</h1>
                                 <h2
-                                    className='text-xl lg:text-2xl text-[#a9a9a9] mt-2'
+                                    className='text-xl lg:text-2xl text-[#a9a9a9] h-[35%] sm:h-auto md:h-auto mt-2'
                                     dangerouslySetInnerHTML={{__html: article.content}}
                                     />
                             </div>
