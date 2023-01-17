@@ -25,13 +25,13 @@ export default function Navbar() {
                 <ul className={`z-10 md:z-auto bg-[#e7e1f2] md:bg-inherit md:flex md:items-center  absolute md:static py-4 md:py-0  w-full 
                 left-0 right-0 md:w-auto transition-top-opacity ease-in-out duration-1000 ${open ? 'top-[90px] opacity-100' : '-top-[400px] opacity-0 md:opacity-100'}`}>
                     <li className=' mx-4 my-6 md:my-0'>
-                        <Link href='/' className='text-lg lg:text-3xl'>Home</Link>
+                        <Link href='/' className='text-base md:text-lg xl:text-3xl'>Home</Link>
                     </li>
                     <li className=' mx-4 my-6 md:my-0'>
-                        <Link href='/blogs' className='text-lg lg:text-3xl'>How It Works</Link>
+                        <Link href='/blogs' className='text-base md:text-lg xl:text-3xl'>How It Works</Link>
                     </li>
                     <li className=' mx-4 my-6 md:my-0'>
-                        <Link href='/' className='text-lg lg:text-3xl'>Our Customers speak</Link>
+                        <Link href='/' className='text-base md:text-lg  xl:text-3xl'>Our Customers speak</Link>
                     </li>
                     <Link href='/hy' className="button ml-4 md:ml-0">
                         Download
