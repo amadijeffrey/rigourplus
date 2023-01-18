@@ -19,6 +19,9 @@ body {
   font-family: 'Montserrat', sans-serif ;
 
 }
+:root{
+  color-scheme: light;
+}
 .container{
   padding:80px 145px; 
 }
